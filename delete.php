@@ -1,12 +1,5 @@
 <?php 
-
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "php";
-
-        $connection = new mysqli($servername, $username, $password, $database);
-
+        include '_dbconnect.php';
         $sn ="";
 
         if ( isset($_GET["id"])) {
@@ -14,7 +7,7 @@
             $sql = "DELETE FROM customer WHERE sn=$sn";
             $connection->query($sql);
 
-             // Gets a return value if the connection is there bwteen the databasse and php
+             // Gets a return value if the connection is there between the databasse and php
             $result = $connection->query($sql);
         }
 

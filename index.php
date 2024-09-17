@@ -28,14 +28,9 @@
             </thead>
             <tbody>
 
-            <!-- Connecing to the database -->
                 <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $database = "php";
-                
-                    $connection = new mysqli($servername, $username, $password, $database);
+                    // Connecting to database
+                    include '_dbconnect.php';
 
                     if($connection -> connect_error) {
                         die("Connection failed: ".$connection->connect_error);

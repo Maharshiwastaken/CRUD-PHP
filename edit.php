@@ -1,12 +1,6 @@
 <?php 
-  //Connecting the database
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "php";
-
-  // COnnecting the database
-  $connection = new mysqli($servername, $username, $password, $database);
+  // Connecting to database
+  include '_dbconnect.php';
 
   // Initializing our variables
   $sn = "";
