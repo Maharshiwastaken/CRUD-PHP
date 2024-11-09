@@ -10,7 +10,7 @@
              // Gets a return value if the connection is there between the databasse and php
             $result = $connection->query($sql);
         }
-
+        // Routing
         header("location: /PHP/index.php");
         exit;
 ?>

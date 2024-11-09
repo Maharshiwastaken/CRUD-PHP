@@ -27,7 +27,7 @@
             }
 
             // Insert new customer to database
-            //Writing into the database
+            // MySQL to write into the database
             $sql = 'INSERT INTO customer (name, email, phone, address)'.
             "VALUES ('$name', '$email', '$phone', '$address')";
             $result = $connection -> query($sql);

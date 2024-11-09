@@ -36,6 +36,7 @@
       exit;
     }
 
+    // Gathering data from the database linked variable, which is an array, to our local variables
     $name = $row["name"];
     $email = $row["email"];
     $phone = $row["phone"];
@@ -51,7 +52,7 @@
     $address = $_POST["inputAddress"];
 
 
-    //TO make sure that we do not have an empty field
+    //To make sure that we do not have an empty field
     do {
       if( empty($name) || empty($email) || empty($phone) || empty($address)) {
         $errorMessage = "All the fields are required.";
@@ -72,6 +73,7 @@
 
       $successMessage = "Customer data updated successfully.";
 
+      // Routing
       header("location: /PHP/index.php");
       exit;
 
@@ -85,6 +87,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
+
+    <!-- Project uses bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -105,6 +109,7 @@
         }
     ?>
 
+     <!-- This is the code for the UI you see -->
     <form method="POST">
     <input type="hidden" name = "inputSn" value = "<?php echo $sn ?>">
     <div class="mb-3">
@@ -126,8 +131,9 @@
     <label for="inputAddress" class="form-label">Address</label>
     <input type="text" class="form-control" name="inputAddress" value="<?php echo $address; ?>">
   </div>
+  
 
-  <!-- <?php
+  <?php
         if(!empty($successMessage)) {
             echo "
             <div class='row mb-3'>
@@ -137,12 +143,12 @@
             </div>
             ";
         }
-    ?> -->
+    ?>
 
     <button type="submit" class="btn btn-primary">Submit</button>
     <a class="btn btn-danger" href="/PHP/index.php">Cancel</a>
 </form>
-
+<!-- UI code ends here -->
     </div>
 </body>
 </html>
