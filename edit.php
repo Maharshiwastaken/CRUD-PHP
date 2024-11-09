@@ -90,7 +90,7 @@
 
 <body>
     <div class="position-absolute top-50 start-50 translate-middle">
-        <h1>New User</h1>
+        <h1>Edit User</h1>
 
     <!-- Magically appearing error message -->
     <?php
